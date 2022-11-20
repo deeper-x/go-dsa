@@ -2,8 +2,11 @@ package main
 
 import (
 	"log"
+	"math/rand"
+	"time"
 
 	"github.com/deeper-x/go-dsa/binarysearch"
+	"github.com/deeper-x/go-dsa/bubblesort"
 	"github.com/deeper-x/go-dsa/linearsearch"
 )
 
@@ -15,6 +18,7 @@ type DataSearch struct {
 
 var needle = 11
 var haystack = []int{1, 5, 6, 7, 8, 9, 10, 11, 13, 15}
+var randSlice = genRandomSlice(10)
 
 func main() {
 	ls := NewData("Linear Search", linearsearch.Run(needle, haystack))
@@ -22,6 +26,9 @@ func main() {
 
 	printSearch(ls)
 	printSearch(bs)
+
+	bubblesort.Run(randSlice)
+	log.Println("Sorted slice:", randSlice)
 }
 
 // printSearch data printing utility
@@ -35,4 +42,15 @@ func NewData(name string, result bool) DataSearch {
 		Name:   name,
 		Result: result,
 	}
+}
+
+func genRandomSlice(size int) []int {
+	res := make([]int, size)
+	rand.Seed(time.Now().UnixNano())
+
+	for i := 0; i < size; i++ {
+		res[i] = rand.Intn(999)
+	}
+
+	return res
 }
