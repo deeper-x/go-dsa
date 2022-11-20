@@ -1,7 +1,7 @@
 package linearsearch
 
 // Run linearsearch
-func Run(datalist []int, key int) bool {
+func Run(key int, datalist []int) bool {
 	for _, item := range datalist {
 		if item == key {
 			return true

@@ -9,7 +9,7 @@ var needleOK = 7
 var needleKO = 12
 
 func TestLinearsearchOK(t *testing.T) {
-	ok := Run(haystack, needleOK)
+	ok := Run(needleOK, haystack)
 
 	if !ok {
 		t.Error("needle should have been found")
@@ -17,7 +17,7 @@ func TestLinearsearchOK(t *testing.T) {
 }
 
 func TestLinearSearchKO(t *testing.T) {
-	ok := Run(haystack, needleKO)
+	ok := Run(needleKO, haystack)
 	if ok {
 		t.Error("needle shouldn't have been found")
 	}
