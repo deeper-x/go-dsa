@@ -3,9 +3,11 @@ package main
 import (
 	"log"
 	"math/rand"
+	"os"
 	"time"
 
 	"github.com/deeper-x/go-dsa/binarysearch"
+	"github.com/deeper-x/go-dsa/binarytree"
 	"github.com/deeper-x/go-dsa/bubblesort"
 	"github.com/deeper-x/go-dsa/linearsearch"
 )
@@ -29,6 +31,10 @@ func main() {
 
 	bubblesort.Run(randSlice)
 	log.Println("Sorted slice:", randSlice)
+
+	btree := binarytree.New()
+	btree.Add(10).Add(20).Add(30).Add(100).Add(15).Add(25)
+	binarytree.Dump(os.Stdout, btree.Root, 0, 'M')
 }
 
 // printSearch data printing utility
