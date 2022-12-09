@@ -3,13 +3,9 @@ package main
 import (
 	"log"
 	"math/rand"
-	"os"
 	"time"
 
-	"github.com/deeper-x/go-dsa/binarysearch"
-	"github.com/deeper-x/go-dsa/binarytree"
-	"github.com/deeper-x/go-dsa/bubblesort"
-	"github.com/deeper-x/go-dsa/linearsearch"
+	"github.com/deeper-x/go-dsa/deadfish"
 )
 
 // DataSearch result object
@@ -23,18 +19,25 @@ var haystack = []int{1, 5, 6, 7, 8, 9, 10, 11, 13, 15}
 var randSlice = genRandomSlice(10)
 
 func main() {
-	ls := NewData("Linear Search", linearsearch.Run(needle, haystack))
-	bs := NewData("Binary Search", binarysearch.Run(needle, haystack))
+	// ls := NewData("Linear Search", linearsearch.Run(needle, haystack))
+	// bs := NewData("Binary Search", binarysearch.Run(needle, haystack))
 
-	printSearch(ls)
-	printSearch(bs)
+	// printSearch(ls)
+	// printSearch(bs)
 
-	bubblesort.Run(randSlice)
-	log.Println("Sorted slice:", randSlice)
+	// bubblesort.Run(randSlice)
+	// log.Println("Sorted slice:", randSlice)
 
-	btree := binarytree.New()
-	btree.Add(10).Add(20).Add(30).Add(100).Add(15).Add(25)
-	binarytree.Dump(os.Stdout, btree.Root, 0, 'M')
+	// btree := binarytree.New()
+	// btree.Add(10).Add(20).Add(30).Add(100).Add(15).Add(25)
+	// binarytree.Dump(os.Stdout, btree.Root, 0, 'M')
+
+	log.Println(deadfish.Run("iiisdoso"))
+	log.Println(deadfish.Run("ooo"))
+	log.Println(deadfish.Run("ioioio"))
+	log.Println(deadfish.Run("codewars"))
+	log.Println(deadfish.Run("isoisoiso"))
+	log.Println(deadfish.Run("codewars"))
 }
 
 // printSearch data printing utility
