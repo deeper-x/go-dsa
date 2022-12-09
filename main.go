@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/deeper-x/go-dsa/zerotoend"
+	"github.com/deeper-x/go-dsa/matrix"
 )
 
 // DataSearch result object
@@ -39,7 +39,9 @@ func main() {
 	// log.Println(deadfish.Run("isoisoiso"))
 	// log.Println(deadfish.Run("codewars"))
 
-	log.Println(zerotoend.Run([]int{1, 2, 0, 1, 0, 1, 0, 3, 0, 1}))
+	// log.Println(zerotoend.Run([]int{1, 2, 0, 1, 0, 1, 0, 3, 0, 1}))
+
+	log.Println(matrix.Run(3))
 }
 
 // printSearch data printing utility
