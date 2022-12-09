@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/deeper-x/go-dsa/deadfish"
+	"github.com/deeper-x/go-dsa/zerotoend"
 )
 
 // DataSearch result object
@@ -32,12 +32,14 @@ func main() {
 	// btree.Add(10).Add(20).Add(30).Add(100).Add(15).Add(25)
 	// binarytree.Dump(os.Stdout, btree.Root, 0, 'M')
 
-	log.Println(deadfish.Run("iiisdoso"))
-	log.Println(deadfish.Run("ooo"))
-	log.Println(deadfish.Run("ioioio"))
-	log.Println(deadfish.Run("codewars"))
-	log.Println(deadfish.Run("isoisoiso"))
-	log.Println(deadfish.Run("codewars"))
+	// log.Println(deadfish.Run("iiisdoso"))
+	// log.Println(deadfish.Run("ooo"))
+	// log.Println(deadfish.Run("ioioio"))
+	// log.Println(deadfish.Run("codewars"))
+	// log.Println(deadfish.Run("isoisoiso"))
+	// log.Println(deadfish.Run("codewars"))
+
+	log.Println(zerotoend.Run([]int{1, 2, 0, 1, 0, 1, 0, 3, 0, 1}))
 }
 
 // printSearch data printing utility
